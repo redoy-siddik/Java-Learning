@@ -20,6 +20,12 @@ public class Method {
             happyBirthday(name, age);
         }
 
+        System.out.println(add(5.6, 8.4));
+        System.out.println(add(5.6, 8.4, 9.89));
+
+        String pizza = bakePizza("Flat bread");
+        System.out.println(pizza);
+
         sc.close();
     }
     static void happyBirthday(String name, int age){
@@ -28,4 +34,25 @@ public class Method {
         System.out.println("You are " + age + " years old!");
         System.out.println("Happy Birthday to you!\n");
     }
+
+    //  Method overload = Method that shares the same name,
+    //                    but different perameters
+    //                    signature = name + parameter
+    static double add(double a, double b){
+        return a + b;
+    }
+    static double add(double a, double b, double c){
+        return a + b + c;
+    }
+    static double add(double a, double b, double c, double d){
+        return a + b + c + d;
+    }
+
+    static String bakePizza(String bread){
+        return bread + " pizza";
+    }
+    static String bakePizza(String bread, String cheese){
+        return cheese + " " + bread + " pizza";
+    }
+
 }
