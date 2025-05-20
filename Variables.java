@@ -39,7 +39,7 @@ public class Variables {
         // System.out.println(name);
         // name = name.trim();
         // System.out.println(name);
-        
+
         name = name.replace("o", "a");
         System.out.println(name);
 
@@ -77,6 +77,36 @@ public class Variables {
             System.out.println("User name of user 2: " + userName);
             System.out.println("Domain of user 2: " + domain);
         }
+
+        // Reference data types: arrays, objects, strings
+        // arrays
+        String[] fruits = { "Apple", "Banana", "Mango", "Jackfruit" };
+        System.out.println(fruits);
+        System.out.println(fruits[2]);
+        
+        System.out.println("Number of fruits: " + fruits.length);
+
+        for (int i = 0; i < fruits.length; i++) {
+            System.out.print(fruits[i]+" ");
+        }
+        System.out.println();
+
+        for (String fruit : fruits) {
+            System.out.print(fruit + " ");
+            // for (int i = 0; i < fruit.length(); i++) {
+            //     System.out.print(fruit.charAt(i) + " ");
+            // }
+            // System.out.println();
+        }
+        System.out.println();
+
+        Arrays.sort(fruits);
+
+        System.out.println("fruits: " + Arrays.toString(fruits));
+
+        Arrays.fill(fruits, "Cherry");
+        System.out.println("fruits: " + Arrays.toString(fruits));
+
         sc.close();
     }
 }
