@@ -83,18 +83,18 @@ public class Variables {
         String[] fruits = { "Apple", "Banana", "Mango", "Jackfruit" };
         System.out.println(fruits);
         System.out.println(fruits[2]);
-        
+
         System.out.println("Number of fruits: " + fruits.length);
 
         for (int i = 0; i < fruits.length; i++) {
-            System.out.print(fruits[i]+" ");
+            System.out.print(fruits[i] + " ");
         }
         System.out.println();
 
         for (String fruit : fruits) {
             System.out.print(fruit + " ");
             // for (int i = 0; i < fruit.length(); i++) {
-            //     System.out.print(fruit.charAt(i) + " ");
+            // System.out.print(fruit.charAt(i) + " ");
             // }
             // System.out.println();
         }
@@ -106,6 +106,37 @@ public class Variables {
 
         Arrays.fill(fruits, "Cherry");
         System.out.println("fruits: " + Arrays.toString(fruits));
+
+        System.out.print("Enter number of foods do you want: ");
+        int num = sc.nextInt();
+        sc.nextLine(); // consume the newline character
+
+        String[] foods = new String[num];
+
+        for (int i = 0; i < foods.length; i++) {
+            System.out.print("Enter a food : ");
+            foods[i] = sc.nextLine();
+        }
+
+        System.out.print("Enter target food: ");
+        String target = sc.nextLine();
+
+        boolean isFound = false;
+        int i;
+
+        for ( i=0; i < foods.length; i++) {
+            if(foods[i].equals(target)){
+                isFound = true;
+                break;
+            }
+        }
+        if (isFound) {
+            System.out.println("Found " + target + " at index " + i);
+        }
+        else {
+            System.out.println(target + " not found");
+            
+        }
 
         sc.close();
     }
