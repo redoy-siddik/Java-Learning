@@ -81,8 +81,9 @@ public class Variables {
         // Reference data types: arrays, objects, strings
         // arrays
         String[] fruits = { "Apple", "Banana", "Mango", "Jackfruit" };
-        System.out.println(fruits);
-        System.out.println(fruits[2]);
+        System.out.println("Fruit array: "+fruits); // prints the reference of the array object
+                                                    // does not print the elements
+        System.out.println("Only one fruit: "+fruits[2]);
 
         System.out.println("Number of fruits: " + fruits.length);
 
@@ -136,6 +137,31 @@ public class Variables {
         else {
             System.out.println(target + " not found");
             
+        }
+
+        // 2D array
+
+        // String[] fruits_2 = { "Apple", "Banana", "Mango", "Jackfruit" }; // 1D array
+        // String[] vegetables = { "Carrot", "Potato", "Tomato", "Onion" }; // 1D array
+        // String[] meats = { "Chicken", "Beef", "mutton", "Fish" }; // 1D array
+
+        // String[][] groceries = { fruits_2, vegetables, meats }; // 2D array
+
+        String[][] groceries = { { "Apple", "Banana", "Mango", "Jackfruit" },
+                                 { "Carrot", "Potato", "Tomato", "Onion" },
+                                  { "Chicken", "Beef", "mutton", "Fish" } };
+
+        groceries[0][0] = "Change kore disi";
+
+        // System.out.println("Groceries: " + groceries[0][0]);
+        System.out.println("Groceries: ");
+        for(String[] food:groceries){
+            // System.out.println(food); // prints the reference of the array object
+            // System.out.println(Arrays.toString(food));
+            for(String item:food){
+                System.out.print(item + " ");
+            }
+            System.out.println();
         }
 
         sc.close();
